@@ -1,0 +1,68 @@
+.homePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red; /* for visual css purposes */
+    height: 100vh;
+    
+    .background-image {
+        animation: whatever 50s infinite linear;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        position: absolute;
+        opacity: 50%;
+        pointer-events: none;
+    }
+
+    .guts {
+        position: relative;
+        .h2 {
+            font-size: 50px;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+    
+        .h1 {
+            color:black;
+            text-align: center;
+            margin-bottom: 10%;
+        }
+
+        .input-box {
+            margin:auto;
+            height: 30px;
+            display: block;
+            border: 2px solid black;
+            text-align: center;
+            transition: background-color .5s ease-out;
+            margin-bottom: 30px;
+        }
+
+        .input-box:hover {
+            background-color: pink;
+        }
+
+        .btn {
+            display: block;
+            margin: auto;
+        }
+
+        .temperatureList {
+            text-align: center;
+            list-style-type: none
+        }
+    }
+}
+
+@keyframes whatever {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+}
+
+
+
