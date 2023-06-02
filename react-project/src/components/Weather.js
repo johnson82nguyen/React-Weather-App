@@ -1,7 +1,7 @@
 
 
 import React from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./Weather.css";
 import { BsCloudSunFill } from 'react-icons/bs';
 import { FaCity } from 'react-icons/fa';
@@ -43,16 +43,14 @@ function Weather () {
     const validateModal = () => {
         return ( 
         <>
-        {modal && <Modal temp={responseObj.main.temp} 
+        {modal ? <Modal temp={responseObj.main.temp} 
         humidity={responseObj.main.humidity}
         max={responseObj.main.temp_max}
         min={responseObj.main.temp_min}
         feels_like={responseObj.main.feels_like}
-        closeModal={setModal}/>}
+        closeModal={setModal}/> : null}
         </>
-        
         );
-        
     }
 
     return (        
@@ -72,14 +70,12 @@ function Weather () {
                         console.log("esc");
                     }
                 }} value={searchInput} onChange={(e)=> {setSearchInput(e.target.value)}} className="input-box" placeholder="Enter city..."></input>
-                <button className="btn" onClick={getForeCast}>click here to get forecast</button>
+                <button className="btn" onClick={getForeCast}>Get Forecast</button>
                 {/* MODAL */}
                 
-                {search ? validateModal() : " "}
-                {is404 ? <p style={{color:"red", textAlign:"center"}}>Please enter a valid State/City</p> : " "}
+                {search ? validateModal() : null}
+                {is404 ? <p style={{ fontSize:"30px", fontWeight:"bold", color:"black", textAlign:"center"}}>Please enter a valid State/City</p> : " "}
 
-                
-                
                 {/* MODAL */}
             </div>
         </div>

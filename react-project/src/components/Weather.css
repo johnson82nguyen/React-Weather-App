@@ -4,12 +4,19 @@
     justify-content: center;
     border: 1px solid red; /* for visual css purposes */
     height: 100vh;
+    background: linear-gradient(
+        45deg,
+        #df0a0a,
+        #d4dac9
+    );
     
     .background-image {
         animation: whatever 50s infinite linear;
         background-repeat: no-repeat;
         background-position: center;
         display: flex;
+        height: 90%;
+        width: 90%;
         position: absolute;
         opacity: 50%;
         pointer-events: none;
@@ -30,8 +37,8 @@
         }
 
         .input-box {
-            margin:auto;
-            height: 30px;
+            margin: auto;
+            height: 40px;
             display: block;
             border: 2px solid black;
             text-align: center;
@@ -46,6 +53,12 @@
         .btn {
             display: block;
             margin: auto;
+            width: 124px;
+            height: 30px; 
+            cursor: pointer;
+            border-radius: 40px;
+            border: 2px solid blacks;
+            background-color: white;
         }
 
         .temperatureList {

@@ -8,11 +8,7 @@ function Modal({ closeModal, temp, min, max, humidity, feels_like }) {
     <div className="modalBackground">
       <div className="modalContainer">
         <div className="titleCloseBtn">
-          <button
-            onClick={() => {
-              closeModal(false);
-            }}
-          >
+          <button onClick={() => { closeModal(false); }}>
             X
           </button>
         </div>
@@ -27,12 +23,7 @@ function Modal({ closeModal, temp, min, max, humidity, feels_like }) {
           <p>Feels like: {feels_like} </p>
         </div>
         <div className="footer">
-          <button
-            onClick={() => {
-              closeModal(false);
-            }}
-            id="cancelBtn"
-          >
+          <button onClick={() => { closeModal(false); }} id="cancelBtn">
             Cancel
           </button>
         </div>
