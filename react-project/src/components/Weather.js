@@ -60,14 +60,9 @@ function Weather () {
             <div className="guts">
                 <h2 className="h2">Check the weather below <BsCloudSunFill/></h2>
                 <h1 className="h1"> Type in your city/state <FaCity/> </h1>
-                <input onKeyPress={(e)=> {
+                <input type="search" onKeyPress={(e)=> {
                     if (e.key === "Enter") {
-                        console.log("HITTING ENTER");
-                        setSearchInput(e.target.value);
                         getForeCast();
-                    }
-                    if (e.keyCode === 27) {
-                        console.log("esc");
                     }
                 }} value={searchInput} onChange={(e)=> {setSearchInput(e.target.value)}} className="input-box" placeholder="Enter city..."></input>
                 <button className="btn" onClick={getForeCast}>Get Forecast</button>

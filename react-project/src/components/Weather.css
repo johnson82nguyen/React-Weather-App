@@ -1,15 +1,19 @@
+body {
+    overflow: hidden; /* Removes scrolling */
+}
+
 .homePage {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid red; /* for visual css purposes */
     height: 100vh;
+    overflow-y: hidden;
     background: linear-gradient(
         45deg,
         #df0a0a,
         #d4dac9
     );
-    
+
     .background-image {
         animation: whatever 50s infinite linear;
         background-repeat: no-repeat;
